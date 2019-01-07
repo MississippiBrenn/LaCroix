@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "24ED598221E3FED0001D9973"
+               BuildableName = "LaCroixTests.xctest"
+               BlueprintName = "LaCroixTests"
+               ReferencedContainer = "container:LaCroixTasteTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "24ED599221E41362001D9973"
+               BuildableName = "MinimizingExample.xctest"
+               BlueprintName = "MinimizingExample"
+               ReferencedContainer = "container:LaCroixTasteTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -53,6 +73,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
+         BundleIdentifier = "com.apple.Terminal"
          FilePath = "/Applications/Utilities/Terminal.app">
       </PathRunnable>
       <MacroExpansion>

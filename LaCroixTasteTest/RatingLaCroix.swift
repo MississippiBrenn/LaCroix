@@ -24,7 +24,7 @@ enum OptionType: String {
     }
 }
 
-class RatingLaCroix {
+public class RatingLaCroix {
     let consoleIO = ConsoleIO()
     
     func interactiveMode() {
@@ -43,8 +43,8 @@ class RatingLaCroix {
                 
             case .rate:
                 consoleIO.writeMessage("Flavors are shown with point totals.")
-                let array = ratedEntries(laCroixBoard: laCroixBoard)
-                print(array)
+                _ = ratedEntries(laCroixBoard: laCroixBoard)
+               
             case .unknown, .quit:
                 
                 consoleIO.writeMessage("Unknown option \(value)", to: .error)
@@ -73,7 +73,10 @@ class RatingLaCroix {
         }
         
     }
-    
+
+    func helloWorld(){
+        print("hello world")
+    }
     func processFile(at url: URL) throws {
         let s = try String(contentsOf: url)
         try process(string: s)
@@ -83,7 +86,7 @@ class RatingLaCroix {
         let myStrings = string.components(separatedBy: .newlines)
         print(myStrings)
         for entry in myStrings {
-            addEntry(entry: entry)
+            _ = addEntry(entry: entry)
         }
     }
     
@@ -103,6 +106,7 @@ class RatingLaCroix {
     
     func ratedEntries(laCroixBoard: [String: Int]) -> [String] {
         var ratedArray:[String] = []
+        var n:Int = 1
         for (k, v) in (Array(laCroixBoard).sorted {
             if $0.1 != $1.1 {
                 return $0.1 > $1.1
@@ -110,7 +114,9 @@ class RatingLaCroix {
                 return $0.0.count < $1.0.count
             }
         }) {
-            ratedArray.append("\(k) points:\(v)")
+            ratedArray.append("\(n). \(k), \(v) pts")
+            print("\(n). \(k), \(v) pts")
+             n += 1
         }
         return ratedArray
     }
