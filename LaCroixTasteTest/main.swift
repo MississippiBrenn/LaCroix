@@ -8,5 +8,8 @@
 
 import Foundation
 
-print("Hello, World!")
+
+let ratingLaCroix  = RatingLaCroix()
+
+ratingLaCroix.interactiveMode()
 

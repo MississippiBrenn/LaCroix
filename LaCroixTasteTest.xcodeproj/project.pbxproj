@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		248C027521E2EA18006A1AA2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C027421E2EA18006A1AA2 /* main.swift */; };
+		248C027C21E2EA6C006A1AA2 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C027B21E2EA6C006A1AA2 /* ConsoleIO.swift */; };
+		248C027E21E2EB23006A1AA2 /* RatingLaCroix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C027D21E2EB23006A1AA2 /* RatingLaCroix.swift */; };
+		248C028621E3D2E3006A1AA2 /* LaCroixTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C028521E3D2E3006A1AA2 /* LaCroixTestBundle.swift */; };
+		248C028C21E3D393006A1AA2 /* LaCroixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248C028B21E3D393006A1AA2 /* LaCroixTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +29,23 @@
 /* Begin PBXFileReference section */
 		248C027121E2EA18006A1AA2 /* LaCroixTasteTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LaCroixTasteTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		248C027421E2EA18006A1AA2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		248C027B21E2EA6C006A1AA2 /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
+		248C027D21E2EB23006A1AA2 /* RatingLaCroix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingLaCroix.swift; sourceTree = "<group>"; };
+		248C028321E3D2E3006A1AA2 /* LaCroixTestBundle.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaCroixTestBundle.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		248C028521E3D2E3006A1AA2 /* LaCroixTestBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaCroixTestBundle.swift; sourceTree = "<group>"; };
+		248C028721E3D2E3006A1AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		248C028B21E3D393006A1AA2 /* LaCroixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaCroixTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		248C026E21E2EA18006A1AA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		248C028021E3D2E3006A1AA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				248C027321E2EA18006A1AA2 /* LaCroixTasteTest */,
+				248C028421E3D2E3006A1AA2 /* LaCroixTestBundle */,
 				248C027221E2EA18006A1AA2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				248C027121E2EA18006A1AA2 /* LaCroixTasteTest */,
+				248C028321E3D2E3006A1AA2 /* LaCroixTestBundle.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +77,20 @@
 			isa = PBXGroup;
 			children = (
 				248C027421E2EA18006A1AA2 /* main.swift */,
+				248C027B21E2EA6C006A1AA2 /* ConsoleIO.swift */,
+				248C027D21E2EB23006A1AA2 /* RatingLaCroix.swift */,
 			);
 			path = LaCroixTasteTest;
+			sourceTree = "<group>";
+		};
+		248C028421E3D2E3006A1AA2 /* LaCroixTestBundle */ = {
+			isa = PBXGroup;
+			children = (
+				248C028521E3D2E3006A1AA2 /* LaCroixTestBundle.swift */,
+				248C028B21E3D393006A1AA2 /* LaCroixTests.swift */,
+				248C028721E3D2E3006A1AA2 /* Info.plist */,
+			);
+			path = LaCroixTestBundle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +113,23 @@
 			productReference = 248C027121E2EA18006A1AA2 /* LaCroixTasteTest */;
 			productType = "com.apple.product-type.tool";
 		};
+		248C028221E3D2E3006A1AA2 /* LaCroixTestBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 248C028A21E3D2E3006A1AA2 /* Build configuration list for PBXNativeTarget "LaCroixTestBundle" */;
+			buildPhases = (
+				248C027F21E3D2E3006A1AA2 /* Sources */,
+				248C028021E3D2E3006A1AA2 /* Frameworks */,
+				248C028121E3D2E3006A1AA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LaCroixTestBundle;
+			productName = LaCroixTestBundle;
+			productReference = 248C028321E3D2E3006A1AA2 /* LaCroixTestBundle.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +141,9 @@
 				ORGANIZATIONNAME = "Cara  Brennan";
 				TargetAttributes = {
 					248C027021E2EA18006A1AA2 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					248C028221E3D2E3006A1AA2 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
 				};
@@ -110,16 +161,38 @@
 			projectRoot = "";
 			targets = (
 				248C027021E2EA18006A1AA2 /* LaCroixTasteTest */,
+				248C028221E3D2E3006A1AA2 /* LaCroixTestBundle */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		248C028121E3D2E3006A1AA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		248C026D21E2EA18006A1AA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248C027E21E2EB23006A1AA2 /* RatingLaCroix.swift in Sources */,
 				248C027521E2EA18006A1AA2 /* main.swift in Sources */,
+				248C027C21E2EA6C006A1AA2 /* ConsoleIO.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		248C027F21E3D2E3006A1AA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				248C028C21E3D393006A1AA2 /* LaCroixTests.swift in Sources */,
+				248C028621E3D2E3006A1AA2 /* LaCroixTestBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +332,42 @@
 			};
 			name = Release;
 		};
+		248C028821E3D2E3006A1AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4VB4PMZQV3;
+				INFOPLIST_FILE = LaCroixTestBundle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cbrenn.LaCroixTestBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		248C028921E3D2E3006A1AA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4VB4PMZQV3;
+				INFOPLIST_FILE = LaCroixTestBundle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cbrenn.LaCroixTestBundle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -276,6 +385,15 @@
 			buildConfigurations = (
 				248C027921E2EA18006A1AA2 /* Debug */,
 				248C027A21E2EA18006A1AA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		248C028A21E3D2E3006A1AA2 /* Build configuration list for PBXNativeTarget "LaCroixTestBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				248C028821E3D2E3006A1AA2 /* Debug */,
+				248C028921E3D2E3006A1AA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
