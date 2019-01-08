@@ -42,7 +42,6 @@ class RatingLaCroix {
                 accessFile(path: fileURL)
                 
             case .rate:
-                consoleIO.writeMessage("Flavors are shown with point totals.")
                 _ = ratedEntries(laCroixBoard: laCroixBoard)
                
             case .unknown, .quit:
@@ -81,7 +80,7 @@ class RatingLaCroix {
     
     func process(string: String) throws {
         let myStrings = string.components(separatedBy: .newlines)
-        print(myStrings)
+        
         for entry in myStrings {
             _ = addEntry(entry: entry)
         }
@@ -119,7 +118,7 @@ class RatingLaCroix {
     }
     
     func ratedEntries() -> [String] {
-        return ratedEntries(laCroixBoard: self.laCroixBoard)
+        return ratedEntries(laCroixBoard:self.laCroixBoard)
 }
 
 }
