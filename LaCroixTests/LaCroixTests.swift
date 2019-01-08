@@ -9,6 +9,8 @@
 import XCTest
 @testable import LaCroixTasteTest
 
+
+//Based on description of task, tests were kept at a minimum. Normally would have tested validity of input, and put in checks for running rating function before inputting data.
 class LaCroixTests: XCTestCase {
     var ratingLaCroix: RatingLaCroix!
     var testData:[String]!
@@ -16,7 +18,6 @@ class LaCroixTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         ratingLaCroix = RatingLaCroix()
         testData = ["Banana Cabana 1",
                         "Grape Escape 2",
@@ -43,7 +44,6 @@ class LaCroixTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     

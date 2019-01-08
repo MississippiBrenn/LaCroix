@@ -37,6 +37,7 @@
 		24ED598321E3FED0001D9973 /* LaCroixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaCroixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24ED598521E3FED0001D9973 /* LaCroixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaCroixTests.swift; sourceTree = "<group>"; };
 		24ED598721E3FED0001D9973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24ED59A121E51919001D9973 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		248C026821E2EA18006A1AA2 = {
 			isa = PBXGroup;
 			children = (
+				24ED59A121E51919001D9973 /* README.md */,
 				248C027321E2EA18006A1AA2 /* LaCroixTasteTest */,
 				24ED598421E3FED0001D9973 /* LaCroixTests */,
 				248C027221E2EA18006A1AA2 /* Products */,

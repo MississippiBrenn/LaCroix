@@ -27,9 +27,10 @@ enum OptionType: String {
 class RatingLaCroix {
     let consoleIO = ConsoleIO()
     
+    //Allowing user to interact with program from console
     func interactiveMode() {
         consoleIO.writeMessage("Welcome to the LaCroix Rating Program. This program takes ratings for new LaCroix flavors and determines which and returns the a sorted list with highest rating first.")
-        let shouldQuit = false
+        var shouldQuit = false
         while !shouldQuit {
             //3
             consoleIO.writeMessage("Type 'f' to add input file or 'r' to rate entries, type 'q' to quit.")
@@ -40,17 +41,17 @@ class RatingLaCroix {
                 consoleIO.writeMessage("Type URL of file")
                 let fileURL = consoleIO.getInput()
                 accessFile(path: fileURL)
-                
             case .rate:
                 _ = ratedEntries(laCroixBoard: laCroixBoard)
-               
-            case .unknown, .quit:
-                
+            case .unknown:
                 consoleIO.writeMessage("Unknown option \(value)", to: .error)
+            case .quit:
+                consoleIO.writeMessage("Thank you for rating your LaCroix")
+                shouldQuit = true
             }
         }
     }
-    
+    //process option user chooses
     func getOption(_ option: String) -> (option:OptionType, value: String) {
         return (OptionType(value: option), option)
     }
@@ -62,7 +63,7 @@ class RatingLaCroix {
          "Guava Java": 0,
          "Blackberry Fairy": 0]
     
-    
+    //using user inputted file path to access file and process as string, adding entry to dictionary
     func accessFile(path: String){
         do {
             let u = URL(fileURLWithPath: path)
@@ -72,7 +73,7 @@ class RatingLaCroix {
         }
         
     }
-
+    
     func processFile(at url: URL) throws {
         let s = try String(contentsOf: url)
         try process(string: s)
@@ -85,7 +86,9 @@ class RatingLaCroix {
             _ = addEntry(entry: entry)
         }
     }
-    
+   
+    //Logic to convert rating to points for each entry and add to laCroixBoard
+    //if I was writing this from scratch without guidelines on input, I would have made it more explicit when the data is added and complete for the user
     func addEntry(entry: String) {
         var rank = [0 , 5, 3, 2, 1, 0]
         var points = 0
@@ -100,6 +103,7 @@ class RatingLaCroix {
         laCroixBoard[name] = currentPoints + points
     }
     
+    //Once the board has been populated with input file, rate based on points and length of name
     func ratedEntries(laCroixBoard: [String: Int]) -> [String] {
         var ratedArray:[String] = []
         var n:Int = 1
@@ -112,15 +116,16 @@ class RatingLaCroix {
         }) {
             ratedArray.append("\(n). \(k), \(v) pts")
             print("\(n). \(k), \(v) pts")
-             n += 1
+            n += 1
         }
         return ratedArray
     }
-    
+ 
+    //Overload function to so that laCroixBoard could be differentiated in tests
     func ratedEntries() -> [String] {
         return ratedEntries(laCroixBoard:self.laCroixBoard)
-}
-
+    }
+    
 }
 
 

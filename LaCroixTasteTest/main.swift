@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 let ratingLaCroix  = RatingLaCroix()
 
 ratingLaCroix.interactiveMode()
