@@ -24,7 +24,7 @@ enum OptionType: String {
     }
 }
 
-public class RatingLaCroix {
+class RatingLaCroix {
     let consoleIO = ConsoleIO()
     
     func interactiveMode() {
@@ -74,9 +74,6 @@ public class RatingLaCroix {
         
     }
 
-    func helloWorld(){
-        print("hello world")
-    }
     func processFile(at url: URL) throws {
         let s = try String(contentsOf: url)
         try process(string: s)
@@ -120,9 +117,12 @@ public class RatingLaCroix {
         }
         return ratedArray
     }
+    
+    func ratedEntries() -> [String] {
+        return ratedEntries(laCroixBoard: self.laCroixBoard)
 }
 
-
+}
 
 
 

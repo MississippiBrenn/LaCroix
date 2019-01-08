@@ -52,24 +52,25 @@ class LaCroixTests: XCTestCase {
         ratingLaCroix.addEntry(entry: entry)
         }
         
-        var array = ratingLaCroix.ratedEntries(laCroixBoard: laCroixBoard)
+        var array = ratingLaCroix.ratedEntries()
         let highest = array[0]
         let knownFirst = "1. Banana Cabana, 10 pts"
         
-        XCTAssertTrue(highest == knownFirst)
+        XCTAssertEqual(highest, knownFirst)
 
     }
     
     func testLowestPoints(){
         for entry in testData {
             ratingLaCroix.addEntry(entry: entry)
+            print(entry)
         }
         
-        var array = ratingLaCroix.ratedEntries(laCroixBoard: laCroixBoard)
+        var array = ratingLaCroix.ratedEntries()
         let lowest = array[array.count-1]
         let knownLast = "5. Blackberry Fairy, 1 pts"
         
-        XCTAssertTrue(lowest == knownLast)
+        XCTAssertEqual(lowest, knownLast)
     }
     
 }
